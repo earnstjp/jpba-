@@ -2,10 +2,14 @@
 # JP Business Advisors – Cloud-Server Project
 
 **Student Name**: Earnst Padayatty  
+
 **Student Number**: 35559321 
+
 **Domain**: [earnst.online](https://earnst.online) 
+
 **Public IP**: [3.107.125.181](http://3.107.125.181)
-**Video Explainer**: [Insert YouTube or OneDrive link]
+
+**Video Explainer**: [https://drive.google.com/file/d/1HuXC15eu8KlxFbHX4SIONvmkWGEdCRHF/view?usp=drivesdk]
 
 ---
 
