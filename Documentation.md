@@ -42,12 +42,13 @@ STEP 2: Connect to Your EC2
 Copy the Public IP address.
 
 Use following commands in the process :
-chmod 400 your-key.pem
+chmod 400 earnst6
 ssh -i earnst6 ec2-user@<http://3.107.125.181/>
 
 
 STEP 3: Link Domain (e.g. from GoDaddy)
-Go to your domain provider (e.g., GoDaddy).
+
+Go to your domain provider 
 
 Find DNS Management for your domain.
 
