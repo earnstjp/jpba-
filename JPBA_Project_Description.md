@@ -20,7 +20,7 @@
 
 ---
 
-## ☁️ EC2 Server Configuration
+##  EC2 Server Configuration
 
 - **Platform**: AWS EC2  
 - **OS**: Ubuntu   
@@ -75,7 +75,7 @@ sudo certbot --apache
 
 ##  Website Deployment
 
-### Upload HTML files:
+### HTML:
 ```bash
 scp -i "earnst06" index.html ubuntu@<3.107.125.181>:/var/www/html/
 ```
@@ -94,25 +94,7 @@ scp -i "earnst06" index.html ubuntu@<3.107.125.181>:/var/www/html/
 
 ---
 
-##  Custom Script: Expert Assistance Logger
 
-A custom Bash script simulating client question submission to the expert desk.
-
-```bash
-#!/bin/bash
-echo "Welcome to JPBA Expert Desk"
-read -p "Enter your name: " name
-read -p "Enter your question: " question
-timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-echo "[$timestamp] $name asked: $question" >> /var/www/html/expert_questions.txt
-echo "✅ Your question has been logged!"
-```
--  Creative, original scripting  
--  Useful for future feature scaling  
--  Student contribution is clearly documented  
--  Output saved to: `/var/www/html/expert_questions.txt`
-
----
 
 ##  Video Explainer
 
@@ -121,11 +103,11 @@ echo "✅ Your question has been logged!"
 - DNS & SSL walkthrough  
 - Bash script usage
 
-🎬 Link: [Insert your video link here]
+🎬 Link:https://drive.google.com/file/d/1HuXC15eu8KlxFbHX4SIONvmkWGEdCRHF/view?usp=drivesdk
 
 
 ---
 
-##  Rebuild Ready
+##  Conclusion
 
-This documentation allows the full system to be rebuilt from scratch instantly from EC2 setup to live, secure domain deployment.
+This documentation allows the full system to be rebuilt from scratch instantly throgh Amazon EC2.
