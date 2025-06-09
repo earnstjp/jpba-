@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-**JP Business Advisors** is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.
+**JP Business Advisors** is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.This documentatin will allow any user to build a server from scratch within short span of time
 
 
 ---
