@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-**JP Business Advisors** is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.This documentatin will allow any user to build a server from scratch within short span of time
+**JP Business Advisors** is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.This documentatin will allow any user to build a server from scratch within short span of time. This project is all about launching an instance through a Iaas platform and linking it to domain and engaging with the process involved.
 
 
 ---
@@ -110,4 +110,4 @@ scp -i "earnst06" index.html ubuntu@<3.107.125.181>:/var/www/html/
 
 ##  Conclusion
 
-This documentation allows the full system to be rebuilt from scratch instantly throgh Amazon EC2.
+This documentation allows the full system to be rebuilt from scratch instantly through Amazon EC2.
