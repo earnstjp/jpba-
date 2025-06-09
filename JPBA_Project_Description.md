@@ -26,7 +26,7 @@
 
 ### EC2 Setup Commands:
 ```bash
-ssh -i "jpba.pem" ubuntu@<EC2-IP>
+ssh -i "earnst06" ubuntu@<3.107.125.181>
 sudo apt update && sudo apt install apache2 -y
 sudo ufw allow 'Apache Full'
 ```
