@@ -1,24 +1,25 @@
 
-# 🌐 JP Business Advisors – Cloud Server Project
+# JP Business Advisors – Cloud-Server Project
 
 **Student Name**: Earnst Padayatty  
-**Student Number**: [Insert here]  
-**Domain**: [https://earnst.online](https://earnst.online)  
-**Public IP**: [Insert EC2 public IP]  
+**Student Number**: 35559321 
+**Domain**: [earnst.online](https://earnst.online) 
+**Public IP**: [3.107.125.181](http://3.107.125.181)
 **Video Explainer**: [Insert YouTube or OneDrive link]
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 **JP Business Advisors** is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.
+
 
 ---
 
 ## ☁️ EC2 Server Configuration
 
 - **Platform**: AWS EC2  
-- **OS**: Ubuntu 22.04 LTS  
+- **OS**: Ubuntu   
 - **Web Server**: Apache 2  
 - **Instance Type**: t2.micro  
 - **Access**: SSH & HTTP/HTTPS
@@ -31,25 +32,25 @@ sudo ufw allow 'Apache Full'
 ```
 ---
 
-## 🌍 DNS Configuration
+## DNS Configuration
 
 Domain: [https://earnst.online](https://earnst.online)
 
 | Type | Host | Value           | TTL  |
 |------|------|------------------|------|
-| A    | @    | <EC2 Public IP>  | 600  |
+| A    | @    | <3.107.125.181>  | 600  |
 
 ### Steps:
 1. Accessed GoDaddy DNS settings  
 2. Added A Record pointing to EC2 public IP  
-3. Verified propagation via https://dnschecker.org  
-4. Domain successfully loads JPBA website
+3. Verified propagation   
+4. Domain successfully loads the website
 
-✅ DNS configured and accessible globally.
+ DNS configured and accessible globally.
 
 ---
 
-## 🔐 SSL/TLS Configuration
+## SSL/TLS Configuration
 
 HTTPS enabled using **Let's Encrypt Certbot** for Apache.
 
@@ -62,13 +63,13 @@ sudo certbot --apache
 - Auto-redirect from HTTP → HTTPS  
 - Trusted padlock shown in browser  
 - Cert auto-renew handled via systemd
-
-✅ HTTPS live at [https://earnst.online](https://earnst.online)  
-🔍 Verified via [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=earnst.online)
+- Certificate obtained successfully
+ HTTPS live at [https://earnst.online](https://earnst.online)  
+   Verified via [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=earnst.online)
 
 ---
 
-## 🖥️ Website Deployment
+##  Website Deployment
 
 ### Upload HTML files:
 ```bash
@@ -89,7 +90,7 @@ scp -i "jpba.pem" index.html ubuntu@<EC2-IP>:/var/www/html/
 
 ---
 
-## 🧾 Custom Script: Expert Assistance Logger
+##  Custom Script: Expert Assistance Logger
 
 A custom Bash script simulating client question submission to the expert desk.
 
@@ -102,35 +103,25 @@ timestamp=$(date +"%Y-%m-%d %H:%M:%S")
 echo "[$timestamp] $name asked: $question" >> /var/www/html/expert_questions.txt
 echo "✅ Your question has been logged!"
 ```
-- ✅ Creative, original scripting  
-- ✅ Useful for future feature scaling  
-- ✅ Student contribution is clearly documented  
-- 🗂️ Output saved to: `/var/www/html/expert_questions.txt`
+-  Creative, original scripting  
+-  Useful for future feature scaling  
+-  Student contribution is clearly documented  
+-  Output saved to: `/var/www/html/expert_questions.txt`
 
 ---
 
-## 🎥 Video Explainer
+##  Video Explainer
 
-- EC2 + Apache setup  
+- EC2 AWS walkthrough 
 - HTML deployment demo  
 - DNS & SSL walkthrough  
 - Bash script usage
 
 🎬 Link: [Insert your video link here]
 
----
-
-## 📚 References
-
-- Apache: https://httpd.apache.org/  
-- Certbot: https://certbot.eff.org/  
-- AWS EC2 Docs: https://docs.aws.amazon.com/ec2/  
-- DNS Checker: https://dnschecker.org/  
-- SSL Labs: https://www.ssllabs.com/ssltest/analyze.html?d=earnst.online  
-- Murdoch Writing Guide: https://github.com/SCH-IT-MurdochUni/NetworkingLabs/blob/main/Reusable_Learning_Objects/writing.md
 
 ---
 
-## ✅ Rebuild Ready
+##  Rebuild Ready
 
-This documentation allows the full system to be rebuilt from scratch within 1 hour — from EC2 setup to live, secure domain deployment.
+This documentation allows the full system to be rebuilt from scratch instantly from EC2 setup to live, secure domain deployment.
