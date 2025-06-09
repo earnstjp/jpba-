@@ -19,7 +19,43 @@
 
 
 ---
+---
 
+## Process involved
+
+STEP 1: Launch EC2 Instance
+
+AMI: Choose Amazon Linux 2 or Ubuntu.
+
+Instance type: t2.micro (Free Tier eligible).
+
+Create or choose an existing .pem key pair.
+
+Security Group:
+
+Allow HTTP and SSH from your IP or anywhere.
+
+Click Launch Instance.
+
+STEP 2: Connect to Your EC2
+
+Copy the Public IP address.
+
+Use following commands in the process :
+chmod 400 your-key.pem
+ssh -i earnst6 ec2-user@<http://3.107.125.181/>
+
+
+STEP 3: Link Domain (e.g. from GoDaddy)
+Go to your domain provider (e.g., GoDaddy).
+
+Find DNS Management for your domain.
+
+Edit or Add an A Record.
+
+STEP 4 : Secure your web server through lets certbot command.
+
+---
 ##  EC2 Server Configuration
 
 - **Platform**: AWS EC2  
