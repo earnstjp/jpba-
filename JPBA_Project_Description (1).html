@@ -1,0 +1,154 @@
+<h1>🌐 JP Business Advisors – Cloud Server Project</h1>
+
+<p><strong>Student Name</strong>: Earnst Padayatty<br />
+<strong>Student Number</strong>: [Insert here]<br />
+<strong>Domain</strong>: <a href="https://earnst.online">https://earnst.online</a><br />
+<strong>Public IP</strong>: [Insert EC2 public IP]<br />
+<strong>Video Explainer</strong>: [Insert YouTube or OneDrive link]</p>
+
+<hr />
+
+<h2>🧠 Project Overview</h2>
+
+<p><strong>JP Business Advisors</strong> is a cloud-based platform supporting aspiring entrepreneurs and startups. We guide innovators with accurate resources, expert help, and actionable dashboards to turn their ideas into reality.</p>
+
+<hr />
+
+<h2>☁️ EC2 Server Configuration</h2>
+
+<ul>
+<li><strong>Platform</strong>: AWS EC2  </li>
+<li><strong>OS</strong>: Ubuntu 22.04 LTS  </li>
+<li><strong>Web Server</strong>: Apache 2  </li>
+<li><strong>Instance Type</strong>: t2.micro  </li>
+<li><strong>Access</strong>: SSH &amp; HTTP/HTTPS</li>
+</ul>
+
+<h3>EC2 Setup Commands:</h3>
+
+<p>```bash
+ssh -i "jpba.pem" ubuntu@<EC2-IP>
+sudo apt update &amp;&amp; sudo apt install apache2 -y
+sudo ufw allow 'Apache Full'</p>
+
+<h2>```</h2>
+
+<h2>🌍 DNS Configuration</h2>
+
+<p>Domain: <a href="https://earnst.online">https://earnst.online</a></p>
+
+<p>| Type | Host | Value           | TTL  |
+|------|------|------------------|------|
+| A    | @    | <EC2 Public IP>  | 600  |</p>
+
+<h3>Steps:</h3>
+
+<ol>
+<li>Accessed GoDaddy DNS settings  </li>
+<li>Added A Record pointing to EC2 public IP  </li>
+<li>Verified propagation via https://dnschecker.org  </li>
+<li>Domain successfully loads JPBA website</li>
+</ol>
+
+<p>✅ DNS configured and accessible globally.</p>
+
+<hr />
+
+<h2>🔐 SSL/TLS Configuration</h2>
+
+<p>HTTPS enabled using <strong>Let's Encrypt Certbot</strong> for Apache.</p>
+
+<h3>Steps:</h3>
+
+<p><code>bash
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache
+</code></p>
+
+<ul>
+<li>Auto-redirect from HTTP → HTTPS  </li>
+<li>Trusted padlock shown in browser  </li>
+<li>Cert auto-renew handled via systemd</li>
+</ul>
+
+<p>✅ HTTPS live at <a href="https://earnst.online">https://earnst.online</a><br />
+🔍 Verified via <a href="https://www.ssllabs.com/ssltest/analyze.html?d=earnst.online">SSL Labs</a></p>
+
+<hr />
+
+<h2>🖥️ Website Deployment</h2>
+
+<h3>Upload HTML files:</h3>
+
+<p><code>bash
+scp -i "jpba.pem" index.html ubuntu@&lt;EC2-IP&gt;:/var/www/html/
+</code></p>
+
+<h3>File Structure:</h3>
+
+<p><code>
+/var/www/html/
+├── index.html
+├── style.css
+├── dashboard.html (planned)
+└── script.js (optional)
+</code></p>
+
+<ul>
+<li>Clean HTML/CSS website  </li>
+<li>Includes: About, Mission, Features, Contact</li>
+</ul>
+
+<hr />
+
+<h2>🧾 Custom Script: Expert Assistance Logger</h2>
+
+<p>A custom Bash script simulating client question submission to the expert desk.</p>
+
+<p>```bash</p>
+
+<h1>!/bin/bash</h1>
+
+<p>echo "Welcome to JPBA Expert Desk"
+read -p "Enter your name: " name
+read -p "Enter your question: " question
+timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+echo "[$timestamp] $name asked: $question" &gt;&gt; /var/www/html/expert<em>questions.txt
+echo "✅ Your question has been logged!"
+``<code>
+- ✅ Creative, original scripting  
+- ✅ Useful for future feature scaling  
+- ✅ Student contribution is clearly documented  
+- 🗂️ Output saved to:</code>/var/www/html/expert</em>questions.txt`</p>
+
+<hr />
+
+<h2>🎥 Video Explainer</h2>
+
+<ul>
+<li>EC2 + Apache setup  </li>
+<li>HTML deployment demo  </li>
+<li>DNS &amp; SSL walkthrough  </li>
+<li>Bash script usage</li>
+</ul>
+
+<p>🎬 Link: [Insert your video link here]</p>
+
+<hr />
+
+<h2>📚 References</h2>
+
+<ul>
+<li>Apache: https://httpd.apache.org/  </li>
+<li>Certbot: https://certbot.eff.org/  </li>
+<li>AWS EC2 Docs: https://docs.aws.amazon.com/ec2/  </li>
+<li>DNS Checker: https://dnschecker.org/  </li>
+<li>SSL Labs: https://www.ssllabs.com/ssltest/analyze.html?d=earnst.online  </li>
+<li>Murdoch Writing Guide: https://github.com/SCH-IT-MurdochUni/NetworkingLabs/blob/main/Reusable<em>Learning</em>Objects/writing.md</li>
+</ul>
+
+<hr />
+
+<h2>✅ Rebuild Ready</h2>
+
+<p>This documentation allows the full system to be rebuilt from scratch within 1 hour — from EC2 setup to live, secure domain deployment.</p>
