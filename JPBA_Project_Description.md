@@ -60,8 +60,8 @@ sudo apt install certbot python3-certbot-apache -y
 sudo certbot --apache
 ```
 
-- Auto-redirect from HTTP → HTTPS  
-- Trusted padlock shown in browser  
+- Auto-redirect from HTTP to HTTPS  
+- Website secured. 
 - Cert auto-renew handled via systemd
 - Certificate obtained successfully
  HTTPS live at [https://earnst.online](https://earnst.online)  
@@ -73,7 +73,7 @@ sudo certbot --apache
 
 ### Upload HTML files:
 ```bash
-scp -i "jpba.pem" index.html ubuntu@<EC2-IP>:/var/www/html/
+scp -i "earnst06" index.html ubuntu@<3.107.125.181>:/var/www/html/
 ```
 
 ### File Structure:
@@ -81,11 +81,11 @@ scp -i "jpba.pem" index.html ubuntu@<EC2-IP>:/var/www/html/
 /var/www/html/
 ├── index.html
 ├── style.css
-├── dashboard.html (planned)
-└── script.js (optional)
+├── dashboard.html 
+└── script.js 
 ```
 
-- Clean HTML/CSS website  
+- Clean HTML,JS,CSS website  
 - Includes: About, Mission, Features, Contact
 
 ---
